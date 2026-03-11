@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Fashion Store</title>
+    <meta name="description" content="Shop the signature jewellery collections at Fashion Store">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Fashion Store</a></div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Collections</a>
+            <a href="login.html">Sign In</a>
+            <a href="wishlist.html">Wishlist <span class="wishlist-count cart-count" style="display:none;">0</span></a>
+            <a href="cart.html">Cart <span class="cart-count">0</span></a>
+
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <!-- Products Section -->
+        <section id="products" class="products-section section-padding">
+            <h2>Our Signature Pieces</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="p1">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Eternity Diamond Necklace</h3>
+                        <p class="description">18k White Gold with a stunning brilliant-cut center diamond.</p>
+                        <div class="price-action">
+                            <span class="price">$1,299</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-id="p3">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Radiance Diamond Ring</h3>
+                        <p class="description">Exquisite halo setting with a brilliant round cut stone.</p>
+                        <div class="price-action">
+                            <span class="price">$1,549</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-id="p4">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fashion Store Gold Bangle</h3>
+                        <p class="description">Minimalist 24k solid gold bracelet for everyday luxury.</p>
+                        <div class="price-action">
+                            <span class="price">$549</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card" data-id="p5">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sapphire Teardrop Earrings</h3>
+                        <p class="description">Elegant white gold earrings featuring deep blue sapphires.</p>
+                        <div class="price-action">
+                            <span class="price">$1,150</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card" data-id="p6">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Gold Tennis Bracelet</h3>
+                        <p class="description">A timeless row of diamonds set in delicate 14k rose gold.</p>
+                        <div class="price-action">
+                            <span class="price">$2,400</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product-card" data-id="p7">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vintage Pearl Necklace</h3>
+                        <p class="description">Hand-selected freshwater pearls with a diamond clasp.</p>
+                        <div class="price-action">
+                            <span class="price">$750</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card" data-id="p8">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Emerald Cut Engagement Ring</h3>
+                        <p class="description">A breathtaking step-cut emerald diamond in platinum.</p>
+                        <div class="price-action">
+                            <span class="price">$3,899</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Women's Dresses Section -->
+        <section class="products-section section-padding" style="padding-top: 0;">
+            <h2>Women's Fashion</h2>
+            <div class="product-grid">
+                <!-- Dress 1 -->
+                <div class="product-card" data-id="d1">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1572804013427-4d7ca7268217?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Floral Midi Dress</h3>
+                        <p class="description">Elegant floral print midi dress with a flowing silhouette.</p>
+                        <div class="price-action">
+                            <span class="price">$129</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dress 2 -->
+                <div class="product-card" data-id="d2">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Evening Gown</h3>
+                        <p class="description">Luxurious floor-length gown perfect for formal occasions.</p>
+                        <div class="price-action">
+                            <span class="price">$299</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dress 3 -->
+                <div class="product-card" data-id="d3">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Wrap Dress</h3>
+                        <p class="description">Timeless wrap-style dress in premium satin fabric.</p>
+                        <div class="price-action">
+                            <span class="price">$179</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dress 4 -->
+                <div class="product-card" data-id="d4">
+                    <div class="product-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=600');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Summer Sundress</h3>
+                        <p class="description">Breezy cotton sundress with a delicate lace trim.</p>
+                        <div class="price-action">
+                            <span class="price">$89</span>
+                            <div class="btn-group">
+                                <button class="btn btn-primary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                                <button class="btn btn-secondary add-to-cart-btn"><i class="fas fa-shopping-cart"></i>
+                                    Add to Cart</button>
+                                <button class="btn btn-wishlist add-to-wishlist-btn"><i class="far fa-heart"></i>
+                                    Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">Fashion Store</div>
+            <p>&copy; 2026 Fashion Store All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Jewellery Care</a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+

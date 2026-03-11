@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist | Fashion Store</title>
+    <meta name="description" content="Your saved jewellery wishlist at Fashion Store">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Fashion Store</a></div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="products.html">Collections</a>
+            <a href="wishlist.html" class="active">Wishlist <span id="wishlist-nav-count" class="cart-count"
+                    style="display:none;">0</span></a>
+            <a href="cart.html">Cart <span class="cart-count">0</span></a>
+
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="wishlist-section section-padding">
+            <h2>My Wishlist</h2>
+            <div id="wishlist-grid" class="product-grid">
+                <!-- Items injected by JS -->
+            </div>
+            <div id="wishlist-empty" style="display: none; text-align: center; padding: 4rem 2rem;">
+                <i class="fas fa-heart"
+                    style="font-size: 3rem; color: #e5e5e5; margin-bottom: 1rem; display: block;"></i>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">Your wishlist is empty.</p>
+                <a href="products.html" class="btn btn-primary">Explore Collections</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">Fashion Store</div>
+            <p>&copy; 2026 Fashion Store All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Jewellery Care</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        function renderWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('aura_wishlist')) || [];
+            const grid = document.getElementById('wishlist-grid');
+            const empty = document.getElementById('wishlist-empty');
+            const navCount = document.getElementById('wishlist-nav-count');
+
+            navCount.innerText = wishlist.length;
+            navCount.style.display = wishlist.length > 0 ? 'inline-block' : 'none';
+
+            if (wishlist.length === 0) {
+                grid.style.display = 'none';
+                empty.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            empty.style.display = 'none';
+            grid.innerHTML = wishlist.map(item => `
+                <div class="product-card" data-id="${item.id}">
+                    <div class="product-image" style="background-image: url('${item.image}');"></div>
+                    <div class="product-info">
+                        <h3>${item.name}</h3>
+                        <div class="price-action">
+                            <span class="price">$${item.price.toLocaleString()}</span>
+                            <div style="display: flex; flex-direction: column; gap: 0.7rem; width: 100%;">
+                                <button class="btn btn-primary" style="width:100%;" onclick="moveToCart('${item.id}')">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-secondary" style="width:100%; color:#ef4444; border-color:#ef4444;" onclick="removeFromWishlist('${item.id}')">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function removeFromWishlist(id) {
+            let wishlist = JSON.parse(localStorage.getItem('aura_wishlist')) || [];
+            wishlist = wishlist.filter(item => item.id !== id);
+            localStorage.setItem('aura_wishlist', JSON.stringify(wishlist));
+            renderWishlist();
+        }
+
+        function moveToCart(id) {
+            const wishlist = JSON.parse(localStorage.getItem('aura_wishlist')) || [];
+            const item = wishlist.find(i => i.id === id);
+            if (item) {
+                addItemToCart(item);
+                removeFromWishlist(id);
+                alert(`"${item.name}" moved to your cart!`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderWishlist);
+    </script>
+</body>
+
+</html>
+
+
