@@ -28,14 +28,53 @@
     </header>
 
     <main>
-        <!-- Home Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Timeless Elegance</h1>
-                <p>Discover our exclusive collection of fine jewellery. Handcrafted pieces designed to celebrate your
-                    most precious moments.</p>
-                <a href="products.html" class="btn btn-primary">Shop the Collection <i
-                        class="fas fa-arrow-right"></i></a>
+        <!-- Carousel Section -->
+        <section id="home" class="carousel-container">
+            <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600')">
+                    <div class="hero-content">
+                        <h1>Timeless Elegance</h1>
+                        <p>Discover our exclusive collection of fine jewellery. Handcrafted pieces designed to celebrate
+                            your most precious moments.</p>
+                        <a href="products.html" class="btn btn-primary">Shop the Collection <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=1600')">
+                    <div class="hero-content">
+                        <h1>New Arrivals</h1>
+                        <p>Explore our latest curated pieces for the modern woman. Sophistication meets contemporary
+                            design.</p>
+                        <a href="products.html" class="btn btn-primary">View New Arrivals <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=1600')">
+                    <div class="hero-content">
+                        <h1>Artisan Crafted</h1>
+                        <p>Every piece tells a story of craftsmanship and dedication to perfection. Experience pure
+                            luxury.</p>
+                        <a href="products.html" class="btn btn-primary">Our Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button class="carousel-control prev" aria-label="Previous Slide"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+
+            <!-- Indicators -->
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </section>
     </main>
@@ -55,5 +94,3 @@
 </body>
 
 </html>
-
-

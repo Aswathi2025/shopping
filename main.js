@@ -10,6 +10,14 @@ const cartItemsContainer = document.querySelector('#cart-items-container');
 const cartSubtotalElement = document.getElementById('cart-subtotal');
 const cartTotalElement = document.getElementById('cart-total');
 
+// Carousel Elements
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const prevBtn = document.querySelector('.carousel-control.prev');
+const nextBtn = document.querySelector('.carousel-control.next');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+let carouselInterval;
+
 // Initialize
 function init() {
     updateCartCount();
@@ -29,6 +37,10 @@ function init() {
 
     if (cartItemsContainer) {
         renderCartItems();
+    }
+
+    if (carouselSlides.length > 0) {
+        initCarousel();
     }
 }
 
@@ -192,6 +204,50 @@ function updateWishlistCount() {
         el.innerText = wishlist.length;
         el.style.display = wishlist.length > 0 ? 'inline-block' : 'none';
     });
+}
+
+// ==================== CAROUSEL ====================
+function initCarousel() {
+    startCarousel();
+
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+        resetCarouselInterval();
+    });
+
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+        resetCarouselInterval();
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            showSlide(index);
+            resetCarouselInterval();
+        });
+    });
+}
+
+function showSlide(n) {
+    carouselSlides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    currentSlide = (n + carouselSlides.length) % carouselSlides.length;
+
+    carouselSlides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function startCarousel() {
+    carouselInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+}
+
+function resetCarouselInterval() {
+    clearInterval(carouselInterval);
+    startCarousel();
 }
 
 // Run setup on load
